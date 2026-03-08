@@ -41,11 +41,11 @@
 *.dwo
 
 
-#NDS FILES
+#NDS FILES - I've decided to include Game build do to the difficulty to compile files, since an entire specific envyroment has to be created. 
 build/
 
 *.elf
-*.nds
+#*.nds
 *.ds.gba
 *.map
 

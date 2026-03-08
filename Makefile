@@ -22,7 +22,7 @@ GAME_SUBTITLE	:=	Made by Daniel López-Moya
 
 BUILD		:=	build
 SOURCES		:=	gfx source data
-INCLUDES	:=	include build
+INCLUDES	:=	include build gfx
 
 #---------------------------------------------------------------------------------
 # options for code generation
