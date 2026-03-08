@@ -11,4 +11,6 @@ The project uses devkitpro & devkitARM to compile C++ code into .nds files, whic
 
 I switched to YSMenu (there's a specific build for M3 cartridges), with it you can kind of overwrite the m3 sakura system, so the DS runs YSmenu instead. From there you can load any roms, included homebrewed ones like the one from this progect. 
 
+## Making NDS file
 
+Run $ make, on a terminal from the project directory. this will generate the .nds file, open that with MelonDS or upload it to a microSD nintendo cartridge to play. 
