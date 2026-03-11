@@ -4,12 +4,12 @@
 //======================================================================
 //
 //	NDS_Player1, 64x128@8, 
-//	Transparent color : 00,00,00
+//	Transparent color : FF,00,FF
 //	+ palette 256 entries, not compressed
 //	+ 128 tiles not compressed
 //	Total size: 512 + 8192 = 8704
 //
-//	Time-stamp: 2026-03-08, 17:13:46
+//	Time-stamp: 2026-03-11, 21:51:12
 //	Exported by Cearn's GBA Image Transmogrifier, v0.9.2
 //	( http://www.coranac.com/projects/#grit )
 //

@@ -1,15 +1,31 @@
 #include <nds.h>
 #include <stdio.h>
 #include "player.hpp"
+#include "TestFloor.h"
 
 int main() {
-    // Main engine in 2D mode
+ 
     videoSetMode(MODE_0_2D);
+    videoSetModeSub(MODE_0_2D);
 
-    // Put main sprite graphics in VRAM A
-    vramSetBankA(VRAM_A_MAIN_SPRITE);
+    vramSetBankA(VRAM_A_MAIN_BG);
+    vramSetBankB(VRAM_B_MAIN_SPRITE);
 
-    // Init OAM
+    vramSetBankC(VRAM_C_SUB_BG);
+
+    consoleDemoInit();
+    iprintf("\n Build - Testing background\n");
+
+    //vramSetBankB(VRAM_B_MAIN_BG);
+
+    int bg = bgInit(0, BgType_Text8bpp, BgSize_T_256x256, 31, 0);
+
+    dmaCopy(TestFloorTiles, bgGetGfxPtr(bg), TestFloorTilesLen);
+    dmaCopy(TestFloorMap, bgGetMapPtr(bg), TestFloorMapLen);
+    dmaCopy(TestFloorPal, BG_PALETTE, TestFloorPalLen);
+
+    bgUpdate();
+
     oamInit(&oamMain, SpriteMapping_1D_32, false);
 
     Player player;
@@ -21,6 +37,7 @@ int main() {
 
         swiWaitForVBlank();
         oamUpdate(&oamMain);
+        bgUpdate();
     }
 
     return 0;
